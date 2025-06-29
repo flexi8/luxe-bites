@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Bites – Cake Recipes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #4b2e2e;
+    }
+    header, footer {
+      background-color: #f7e0cc;
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 2px solid #e0c4b0;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #6b3e26;
+      margin: 0.5rem 0;
+    }
+    .home {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .home button {
+      padding: 1rem;
+      background-color: #6b3e26;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .home button:hover {
+      background-color: #8c5e3c;
+    }
+    .recipe {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      border: 2px solid #e0c4b0;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: none;
+    }
+    .recipe img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .recipe h2 {
+      color: #6b3e26;
+    }
+    .recipe ul, .recipe ol {
+      padding-left: 1.5rem;
+    }
+    .back-button {
+      margin-bottom: 1rem;
+      background-color: #8c5e3c;
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #6b3e26;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎂 Luxe Bites</h1>
+    <p>Select a cake recipe to explore</p>
+  </header>
+
+  <div id="home" class="home">
+    <button onclick="showRecipe('cake1')">Chocolate Fudge Cake</button>
+    <button onclick="showRecipe('cake2')">Classic Vanilla Sponge</button>
+    <button onclick="showRecipe('cake3')">Red Velvet Cake</button>
+    <button onclick="showRecipe('cake4')">Lemon Drizzle Cake</button>
+<button onclick="showRecipe('cake5')">Banana Bread Cake</button>
+<button onclick="showRecipe('cake6')">Marble Cake</button>
+<button onclick="showRecipe('cake7')">Pineapple Upside Down Cake</button>
+<button onclick="showRecipe('cake9')">Strawberry Shortcake</button>
+<button onclick="showRecipe('cake10')">Carrot Cake</button>
+<button onclick="showRecipe('cake11')">Mocha Cake</button>
+<button onclick="showRecipe('cake12')">Buttercream Funfetti Cake</button>
+<button onclick="showRecipe('cake14')">Peanut Butter Cake</button>
+<button onclick="showRecipe('cake15')">Orange Creamsicle Cake</button>
+<button onclick="showRecipe('cake16')">Cookies and Cream Cake</button>
+<button onclick="showRecipe('cake17')">Raspberry Ripple Cake</button>
+<button onclick="showRecipe('cake19')">Mint Chocolate Chip Cake</button>
+<button onclick="showRecipe('cake20')">Blueberry Lemon Cake</button>
+  </div>
+
+  <div id="cake1" class="recipe">
+    <button class="back-button" onclick="goHome()">⬅ Back</button>
+    <h2>Chocolate Fudge Cake</h2>
+    <ul>
+      <li>1½ cups all-purpose flour</li>
+      <li>1 cup granulated sugar</li>
+      <li>½ cup unsweetened cocoa powder</li>
+      <li>1 tsp baking soda</li>
+      <li>½ tsp salt</li>
+      <li>1 cup warm water</li>
+      <li>½ cup vegetable oil</li>
+      <li>1 tsp vanilla extract</li>
+      <li>1 tbsp vinegar (white or apple cider)</li>
+    </ul>
+    <ol>
+      <li>Preheat oven to 180°C (350°F). Grease and flour an 8-inch round cake pan.</li>
+      <li>Mix dry ingredients, then add wet ingredients. Stir until smooth.</li>
+      <li>Pour batter into pan and bake for 30–35 mins. Let cool before serving.</li>
+    </ol>
+    <img src="https://example.com/cake1.jpg" alt="Chocolate Fudge Cake">
+  </div>
+
+  <div id="cake2" class="recipe">
+    <button class="back-button" onclick="goHome()">⬅ Back</button>
+    <h2>Classic Vanilla Sponge</h2>
+    <ul>
+      <li>2 cups flour</li>
+      <li>1½ cups sugar</li>
+      <li>1 cup butter</li>
+      <li>4 eggs</li>
+      <li>1 cup milk</li>
+      <li>2 tsp vanilla extract</li>
+      <li>2 tsp baking powder</li>
+      <li>¼ tsp salt</li>
+    </ul>
+    <ol>
+      <li>Preheat oven to 180°C (350°F). Grease two 8-inch pans.</li>
+      <li>Cream butter and sugar. Add eggs one at a time. Mix dry and wet ingredients alternately.</li>
+      <li>Divide batter and bake for 25–30 mins. Cool and frost.</li>
+    </ol>
+    <img src="https://example.com/cake2.jpg" alt="Vanilla Sponge Cake">
+  </div>
+
+  <div id="cake3" class="recipe">
+    <button class="back-button" onclick="goHome()">⬅ Back</button>
+    <h2>Red Velvet Cake</h2>
+    <ul>
+      <li>2½ cups flour</li>
+      <li>1½ cups sugar</li>
+      <li>1 tsp baking soda</li>
+      <li>1 tsp cocoa powder</li>
+      <li>1½ cups vegetable oil</li>
+      <li>1 cup buttermilk</li>
+      <li>2 eggs</li>
+      <li>2 tbsp red food coloring</li>
+      <li>1 tsp vanilla extract</li>
+      <li>1 tsp vinegar</li>
+    </ul>
+    <ol>
+      <li>Preheat oven to 175°C. Mix all ingredients. Divide into pans and bake 30 mins.</li>
+      <li>Cool before frosting. Serve chilled.</li>
+    </ol>
+    <img src="https://example.com/cake3.jpg" alt="Red Velvet Cake">
+  </div>
+
+  <footer>
+    &copy; Luxe Bites 2025 · <a href="mailto:flexiailabs@gmail.com">Contact Us</a>
+  <div id="cake4" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Lemon Drizzle Cake</h2>
+  <ul>
+    <li>1½ cups self-rising flour</li>
+    <li>1 cup sugar</li>
+    <li>1 cup butter</li>
+    <li>2 eggs</li>
+    <li>Zest and juice of 1 lemon</li>
+    <li>½ cup powdered sugar (for drizzle)</li>
+  </ul>
+  <ol>
+    <li>Preheat oven to 180°C. Cream butter and sugar, then mix in eggs and lemon zest.</li>
+    <li>Fold in flour. Pour into pan and bake 30–35 mins.</li>
+    <li>Mix lemon juice with powdered sugar and drizzle over warm cake.</li>
+  </ol>
+  <img src="https://example.com/cake4.jpg" alt="Lemon Drizzle Cake">
+</div>
+
+<div id="cake5" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Banana Bread Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1 tsp baking soda</li>
+    <li>½ tsp salt</li>
+    <li>½ cup butter</li>
+    <li>¾ cup brown sugar</li>
+    <li>2 eggs</li>
+    <li>3 ripe bananas, mashed</li>
+  </ul>
+  <ol>
+    <li>Preheat oven to 175°C. Cream butter and sugar, add eggs and mashed bananas.</li>
+    <li>Mix in dry ingredients. Pour into pan and bake 50–55 mins.</li>
+  </ol>
+  <img src="https://example.com/cake5.jpg" alt="Banana Bread Cake">
+</div>
+
+<div id="cake6" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Marble Cake</h2>
+  <ul>
+    <li>2½ cups flour</li>
+    <li>1 cup butter</li>
+    <li>2 cups sugar</li>
+    <li>4 eggs</li>
+    <li>1 cup milk</li>
+    <li>2 tsp baking powder</li>
+    <li>¼ cup cocoa powder</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar, add eggs. Mix in dry ingredients alternately with milk.</li>
+    <li>Divide batter, stir cocoa into one part. Swirl both batters in pan.</li>
+    <li>Bake at 175°C for 40–45 mins.</li>
+  </ol>
+  <img src="https://example.com/cake6.jpg" alt="Marble Cake">
+</div>
+
+<div id="cake7" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Pineapple Upside Down Cake</h2>
+  <ul>
+    <li>1 can pineapple rings</li>
+    <li>½ cup butter</li>
+    <li>¾ cup brown sugar</li>
+    <li>1½ cups flour</li>
+    <li>1 cup sugar</li>
+    <li>2 eggs</li>
+    <li>1 tsp baking powder</li>
+    <li>½ cup milk</li>
+  </ul>
+  <ol>
+    <li>Melt butter in pan, sprinkle brown sugar. Arrange pineapples.</li>
+    <li>Mix cake batter and pour over fruit. Bake at 180°C for 35 mins.</li>
+    <li>Invert onto plate while warm.</li>
+  </ol>
+  <img src="https://example.com/cake7.jpg" alt="Pineapple Upside Down Cake">
+</div>
+
+<div id="cake8" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Coconut Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp baking powder</li>
+    <li>½ tsp salt</li>
+    <li>1 cup butter</li>
+    <li>1½ cups sugar</li>
+    <li>4 eggs</li>
+    <li>1 cup coconut milk</li>
+    <li>1 cup shredded coconut</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs, coconut milk, then dry ingredients.</li>
+    <li>Stir in coconut. Pour into pans and bake at 175°C for 30–35 mins.</li>
+  </ol>
+  <img src="https://example.com/cake8.jpg" alt="Coconut Cake">
+</div>
+
+<div id="cake9" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Strawberry Shortcake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1 tbsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1/4 cup sugar</li>
+    <li>1/2 cup cold butter</li>
+    <li>2/3 cup milk</li>
+    <li>2 cups fresh strawberries, sliced</li>
+    <li>1/2 cup whipped cream</li>
+  </ul>
+  <ol>
+    <li>Preheat oven to 200°C. Mix dry ingredients, cut in butter, then add milk.</li>
+    <li>Bake shortcakes 12–15 minutes. Slice and layer with strawberries and cream.</li>
+  </ol>
+  <img src="https://example.com/cake9.jpg" alt="Strawberry Shortcake">
+</div>
+
+<div id="cake10" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Carrot Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>2 tsp baking soda</li>
+    <li>1 tsp cinnamon</li>
+    <li>1/2 tsp salt</li>
+    <li>1/2 cup oil</li>
+    <li>1/2 cup applesauce</li>
+    <li>1 cup brown sugar</li>
+    <li>3 eggs</li>
+    <li>2 cups shredded carrots</li>
+    <li>1/2 cup chopped walnuts</li>
+  </ul>
+  <ol>
+    <li>Preheat oven to 175°C. Mix wet ingredients, then stir in dry, carrots, and nuts.</li>
+    <li>Bake for 35–40 mins. Cool before frosting with cream cheese frosting.</li>
+  </ol>
+  <img src="https://example.com/cake10.jpg" alt="Carrot Cake">
+</div>
+
+<div id="cake11" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Mocha Cake</h2>
+  <ul>
+    <li>1½ cups flour</li>
+    <li>1 cup sugar</li>
+    <li>1/2 cup cocoa powder</li>
+    <li>1/2 cup strong brewed coffee</li>
+    <li>1/2 cup milk</li>
+    <li>2 eggs</li>
+    <li>1 tsp baking soda</li>
+    <li>1 tsp vanilla extract</li>
+  </ul>
+  <ol>
+    <li>Mix wet and dry ingredients separately, then combine and stir until smooth.</li>
+    <li>Pour into pan and bake at 175°C for 30–35 mins. Let cool before serving.</li>
+  </ol>
+  <img src="https://example.com/cake11.jpg" alt="Mocha Cake">
+</div>
+
+<div id="cake12" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Buttercream Funfetti Cake</h2>
+  <ul>
+    <li>2½ cups flour</li>
+    <li>1½ cups sugar</li>
+    <li>1 cup butter</li>
+    <li>4 eggs</li>
+    <li>1 cup milk</li>
+    <li>1/2 cup rainbow sprinkles</li>
+    <li>1 tsp vanilla extract</li>
+    <li>2 tsp baking powder</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar, add eggs and vanilla. Mix in dry ingredients and sprinkles.</li>
+    <li>Bake at 175°C for 30 mins. Frost with buttercream and add extra sprinkles.</li>
+  </ol>
+  <img src="https://example.com/cake12.jpg" alt="Buttercream Funfetti Cake">
+</div>
+
+<div id="cake13" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Spiced Apple Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp cinnamon</li>
+    <li>1/2 tsp nutmeg</li>
+    <li>1 tsp baking soda</li>
+    <li>1/2 tsp salt</li>
+    <li>2 eggs</li>
+    <li>1/2 cup vegetable oil</li>
+    <li>1 cup sugar</li>
+    <li>2 cups chopped apples</li>
+  </ul>
+  <ol>
+    <li>Mix wet and dry ingredients separately. Fold in apples.</li>
+    <li>Pour into greased pan and bake at 180°C for 35–40 mins.</li>
+  </ol>
+  <img src="https://example.com/cake13.jpg" alt="Spiced Apple Cake">
+</div>
+
+<div id="cake14" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Peanut Butter Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup peanut butter</li>
+    <li>1 cup sugar</li>
+    <li>2 eggs</li>
+    <li>1 cup milk</li>
+    <li>1 tsp vanilla extract</li>
+  </ul>
+  <ol>
+    <li>Cream peanut butter and sugar. Add eggs, then mix in dry ingredients and milk alternately.</li>
+    <li>Bake at 175°C for 30–35 mins. Cool and frost with peanut butter glaze.</li>
+  </ol>
+  <img src="https://example.com/cake14.jpg" alt="Peanut Butter Cake">
+</div>
+
+<div id="cake15" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Orange Creamsicle Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup orange juice</li>
+    <li>1 tbsp orange zest</li>
+    <li>1 cup sugar</li>
+    <li>1/2 cup butter</li>
+    <li>2 eggs</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs, juice, zest, then mix in dry ingredients.</li>
+    <li>Bake at 175°C for 30–35 mins. Frost with orange cream cheese frosting.</li>
+  </ol>
+  <img src="https://example.com/cake15.jpg" alt="Orange Creamsicle Cake">
+</div>
+
+<div id="cake16" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Cookies and Cream Cake</h2>
+  <ul>
+    <li>2½ cups flour</li>
+    <li>2 tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup butter</li>
+    <li>1½ cups sugar</li>
+    <li>4 eggs</li>
+    <li>1 cup milk</li>
+    <li>1 cup crushed chocolate sandwich cookies</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs, then mix in dry ingredients and milk. Fold in cookies.</li>
+    <li>Bake at 175°C for 30–35 mins. Top with cookie cream frosting.</li>
+  </ol>
+  <img src="https://example.com/cake16.jpg" alt="Cookies and Cream Cake">
+</div>
+
+<div id="cake17" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Raspberry Ripple Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup butter</li>
+    <li>1¼ cups sugar</li>
+    <li>4 eggs</li>
+    <li>1/2 cup milk</li>
+    <li>1/2 cup raspberry puree</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs, then alternate adding dry ingredients and milk.</li>
+    <li>Swirl in raspberry puree. Bake at 175°C for 35 mins.</li>
+  </ol>
+  <img src="https://example.com/cake17.jpg" alt="Raspberry Ripple Cake">
+</div>
+
+<div id="cake18" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Black Forest Cake</h2>
+  <ul>
+    <li>1½ cups flour</li>
+    <li>1 cup sugar</li>
+    <li>1/2 cup cocoa powder</li>
+    <li>1 tsp baking soda</li>
+    <li>1/2 tsp salt</li>
+    <li>2 eggs</li>
+    <li>1 cup buttermilk</li>
+    <li>1/2 cup cherry juice</li>
+    <li>1 cup cherries, pitted</li>
+  </ul>
+  <ol>
+    <li>Mix wet and dry ingredients separately, combine and stir in cherries.</li>
+    <li>Bake at 175°C for 35 mins. Top with whipped cream and more cherries.</li>
+  </ol>
+  <img src="https://example.com/cake18.jpg" alt="Black Forest Cake">
+</div>
+
+<div id="cake19" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Mint Chocolate Chip Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>1½ tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup sugar</li>
+    <li>1/2 cup butter</li>
+    <li>2 eggs</li>
+    <li>1/2 cup milk</li>
+    <li>1/4 tsp mint extract</li>
+    <li>1/2 cup mini chocolate chips</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs and mint. Mix in dry ingredients alternately with milk. Fold in chocolate chips.</li>
+    <li>Bake at 175°C for 30 mins. Cool and frost with mint buttercream.</li>
+  </ol>
+  <img src="https://example.com/cake19.jpg" alt="Mint Chocolate Chip Cake">
+</div>
+
+<div id="cake20" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Blueberry Lemon Cake</h2>
+  <ul>
+    <li>2 cups flour</li>
+    <li>2 tsp baking powder</li>
+    <li>1/2 tsp salt</li>
+    <li>1 cup butter</li>
+    <li>1 cup sugar</li>
+    <li>3 eggs</li>
+    <li>1/2 cup milk</li>
+    <li>1 tbsp lemon zest</li>
+    <li>1 cup blueberries</li>
+  </ul>
+  <ol>
+    <li>Cream butter and sugar. Add eggs, milk, and zest. Fold in blueberries with flour mixture.</li>
+    <li>Bake at 180°C for 35 mins. Cool and glaze with lemon drizzle.</li>
+  </ol>
+  <img src="https://example.com/cake20.jpg" alt="Blueberry Lemon Cake">
+</div>
+
+<div class="recipe" id="tips">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>🎓 Luxe Bites Baking Tips & Hacks</h2>
+  <ul>
+    <li>🍰 Always preheat your oven for accurate temperature.</li>
+    <li>🧈 Bring butter and eggs to room temperature for a smooth batter.</li>
+    <li>🥄 Measure ingredients using proper measuring tools for precision.</li>
+    <li>🔁 Don’t overmix batter; mix until just combined for soft texture.</li>
+    <li>🎂 Test cakes with a toothpick — if it comes out clean, it’s done.</li>
+    <li>❄ Let cakes cool before removing from pans to avoid breaking.</li>
+    <li>🌈 Add a teaspoon of vinegar or lemon juice to buttermilk for fluffiness.</li>
+    <li>🧁 Freeze cakes before frosting for clean, smooth finishes.</li>
+    <li>🎨 Use food coloring gels instead of liquids for vibrant colors.</li>
+    <li>👩‍🍳 Clean as you go — makes baking more enjoyable!</li>
+  </ul>
+</div>
+
+</footer>
+
+  <script>
+    function showRecipe(id) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function goHome() {
+      document.getElementById('home').style.display = 'flex';
+      document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
+    }
+  </script>
+</body>
+</html>

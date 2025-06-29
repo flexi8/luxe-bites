@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxe Bites – Ice Cream Recipes</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff8f0;
+      color: #4b2e2e;
+    }
+    header, footer {
+      background-color: #f7e0cc;
+      text-align: center;
+      padding: 1rem;
+      border-bottom: 2px solid #e0c4b0;
+    }
+    h1 {
+      font-size: 2.2rem;
+      color: #6b3e26;
+      margin: 0.5rem 0;
+    }
+    .home {
+      max-width: 700px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .home button {
+      padding: 1rem;
+      background-color: #6b3e26;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .home button:hover {
+      background-color: #8c5e3c;
+    }
+    .recipe {
+      max-width: 700px;
+      margin: 2rem auto;
+      background: #fff;
+      border: 2px solid #e0c4b0;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      display: none;
+    }
+    .recipe img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 1rem;
+    }
+    .recipe h2 {
+      color: #6b3e26;
+    }
+    .recipe ul, .recipe ol {
+      padding-left: 1.5rem;
+    }
+    .back-button {
+      margin-bottom: 1rem;
+      background-color: #8c5e3c;
+    }
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #6b3e26;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🎂 Luxe Bites</h1>
+    <p>Select an ice-cream recipe to explore</p>
+  </header>
+
+  <div id="home" class="home">
+    <button onclick="showRecipe('ice1')">Honey Lavender Ice Cream</button>
+    <button onclick="showRecipe('ice2')">Tiramisu Gelato</button>
+    <button onclick="showRecipe('ice3')">Cherry Garcia</button>
+    <button onclick="showRecipe('ice4')">Lemon Basil Sorbet</button>
+    <button onclick="showRecipe('ice5')">Coconut Cream Ice Cream</button>
+    <button onclick="showRecipe('ice6')">Blackberry Swirl</button>
+    <button onclick="showRecipe('ice7')">Matcha Green Tea Ice Cream</button>
+    </div>
+
+<div id="ice1" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Honey Lavender Ice Cream</h2>
+  <ul>
+    <li>2 cups heavy cream</li>
+    <li>1 cup milk</li>
+    <li>2/3 cup honey</li>
+    <li>1 tbsp dried lavender</li>
+  </ul>
+  <ol>
+    <li>Heat milk and lavender. Let steep 10 min, then strain.</li>
+    <li>Stir in honey and cream. Chill, churn and freeze.</li>
+  </ol>
+</div>
+
+<div id="ice12" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Tiramisu Gelato</h2>
+  <ul>
+    <li>2 cups mascarpone</li>
+    <li>1 cup cream</li>
+    <li>1/2 cup sugar</li>
+    <li>1 tbsp espresso</li>
+    <li>1 tsp cocoa powder</li>
+  </ul>
+  <ol>
+    <li>Blend all ingredients. Chill, churn and freeze.</li>
+    <li>Dust with cocoa powder before serving.</li>
+  </ol>
+</div>
+
+<div id="ice3" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Cherry Garcia</h2>
+  <ul>
+    <li>2 cups cream</li>
+    <li>1 cup milk</li>
+    <li>2/3 cup sugar</li>
+    <li>1/2 cup chopped cherries</li>
+    <li>1/2 cup dark chocolate chunks</li>
+  </ul>
+  <ol>
+    <li>Churn base, stir in cherries and chocolate. Freeze.</li>
+  </ol>
+</div>
+
+<div id="ice4" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Lemon Basil Sorbet</h2>
+  <ul>
+    <li>1 cup water</li>
+    <li>1/2 cup sugar</li>
+    <li>1/2 cup lemon juice</li>
+    <li>2 tbsp chopped basil</li>
+  </ul>
+  <ol>
+    <li>Make simple syrup, add lemon and basil. Chill and churn.</li>
+  </ol>
+</div>
+
+<div id="ice5" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Coconut Cream Ice Cream</h2>
+  <ul>
+    <li>2 cans coconut milk</li>
+    <li>1/2 cup sugar</li>
+    <li>1 tsp vanilla extract</li>
+  </ul>
+  <ol>
+    <li>Whisk all ingredients. Chill, churn, freeze.</li>
+  </ol>
+</div>
+
+<div id="ice6" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Blackberry Swirl</h2>
+  <ul>
+    <li>2 cups cream</li>
+    <li>1 cup milk</li>
+    <li>3/4 cup sugar</li>
+    <li>1/2 cup blackberry puree</li>
+  </ul>
+  <ol>
+    <li>Churn base, then swirl in blackberry puree before freezing.</li>
+  </ol>
+</div>
+
+<div id="ice7" class="recipe">
+  <button class="back-button" onclick="goHome()">⬅ Back</button>
+  <h2>Matcha Green Tea Ice Cream</h2>
+  <ul>
+    <li>2 cups cream</li>
+    <li>1 cup milk</li>
+    <li>3/4 cup sugar</li>
+    <li>2 tbsp matcha powder</li>
+  </ul>
+  <ol>
+    <li>Whisk all until smooth. Chill, churn and freeze.</li>
+  </ol>
+</div>
+
+</footer>
+
+  <script>
+    function showRecipe(id) {
+      document.getElementById('home').style.display = 'none';
+      document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function goHome() {
+      document.getElementById('home').style.display = 'flex';
+      document.querySelectorAll('.recipe').forEach(div => div.style.display = 'none');
+    }
+  </script>
+</body>
+</html>
+
